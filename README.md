@@ -1,3 +1,14 @@
+# 数据绑定
+---------
+
+- angular默认的数据绑定方式是单向的（但angularJs默认双向绑定）
+- 使用插值表达式：<h1>{{productTitle}}</h1>
+- 使用方括号，将HTML标签的一个属性绑定到一个表达式上：<img [src] = "imgUrl">
+- 使用小括号，将组件控制器的一个方法，绑定为模板上的一个事件处理器：<button (click)="toDetail()">详情</button>
+- 
+
+
+
 # AngularBind
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
