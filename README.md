@@ -41,7 +41,34 @@
   - 第二种： ```<input [(ngModel)]="name2">```，其中name2在Controller中;ngModel指令用在哪个标签上会处理哪个事件
   ，是由angular内部的一组ControlValueAccessor接口的默认实现来管理的。(多用于表单处理)
   
-
+## 响应式编程：异步数据流编程
+  ### 观察者模式
+    - **可观察对象** ---调用---> **观察者**
+    - **观察者** ---注册---> **可观察对象**
+    - 在初始化可观察对象时，会向里面注册一些观察者对象；当可观察对象里面发生一些变化时，会调用观察者里面相应的方法，
+    来把自己的变化，告诉观察者做相应处理。
+  ### RxJs(javaScript响应式编程包,angular依赖这个包)与观察者模式：
+    - 简单代码：
+    ```
+    var subscription = Observable.form([1,2,3,4])
+    .filter( (e) => e%2 == 0 )
+    .map( (e) => e*e )
+    .subscribe(
+      e => console.log(e),
+      error => console.log(error),
+      () => console.log("什么都没有，结束啦！")
+    );
+    ```
+    - 代码介绍：
+      - 可观察对象Observable(流): (这里指[1,2,3,4])表示一组值或事件的集合
+      - 观察者Observer： (这里指subscribe方法里面的参数，3个观察者)一个回调函数集合，它知道怎样去监听Observable发送的消息
+      - 订阅Subscription： 表示一个可观察对象，主要用于取消订阅。(当一个可观察对象被订阅以后，即调subscribe方法后，会返回
+      一个对象，即订阅对象Subscription)
+      - 操作符Operators： 纯粹的函数，使开发者可以以函数式编程的方式处理集合。(这里指filter，map)
+    
+  ### angular和响应式编程
+    - 在传统的javaScript里面，事件被作为一次性的处理来对待。在angular中，引入了一种新的事件处理的思路：
+    将事件作为一个永不结束的流来处理。
 
 # AngularBind
 
