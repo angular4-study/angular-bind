@@ -1,5 +1,4 @@
 # 数据绑定
----------
 
 - angular默认的数据绑定方式是**单向**的（但angularJs默认双向绑定）
 - 使用插值表达式：  ```<h1>{{productTitle}}</h1>```
@@ -25,7 +24,6 @@
 ## DOM属性绑定
   - ```<img [src]="imgUrl">```
   - ```<img src="{{imgUrl}}">```
------------
  
 ## HTML属性绑定
   - 基本HTML属性绑定：```<td [attr.colspan]="tableColspan">基本HTML属性绑定</td>```
@@ -36,10 +34,13 @@
   - 样式绑定：
     - ``` <button> [style.color]=" isSpecial ? 'red' : 'green' ">HTML样式绑定1</button>```
     - ``` <div [ngStyle]="{ 'font-style' : this.canSave ? 'italic' : 'normal' }">HTML样式绑定2</div>```
---------------------------
 
 ## 双向绑定
-  - 
+  - 可以非常简单地使**视图和模型保持同步，无论哪一方改变，另一方都能立即被同步**
+  - 第一种： ```<input [value]="name" (input)="twoBind($event)">```，其中name，twoBind()在Controller中
+  - 第二种： ```<input [(ngModel)]="name2">```，其中name2在Controller中;ngModel指令用在哪个标签上会处理哪个事件
+  ，是由angular内部的一组ControlValueAccessor接口的默认实现来管理的。(多用于表单处理)
+  
 
 
 # AngularBind

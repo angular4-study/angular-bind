@@ -1,0 +1,12 @@
+<p>双向绑定2</p>
+<div>
+  <!-- 这个例子中，ngModel指令用在input标签上，这时，使用的是input的事件，此时input事件
+   是驱动input标签和底层DOM对象同步的一个默认事件，当ngModel指令用在不同的其它的HTML标签
+   上时，这个驱动事件可能是不同的。
+
+   ngModel指令用在哪个标签上会处理哪个事件，是由angular内部的一组ControlValueAccessor接
+   口的实现来管理的。(多用于表单处理)-->
+  <!-- 这种需要在app.module.ts中import {FormsModule} from '@angular/forms'; -->
+  <input [(ngModel)]="name2">
+  <b>双向绑定2:{{name2}}</b>
+</div>
