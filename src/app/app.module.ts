@@ -7,13 +7,17 @@ import {AppComponent} from './app.component';
 import {BindComponent} from './bind/bind.component';
 import {TwobindComponent} from './twobind/twobind.component';
 import {ResponsiveComponent} from './responsive/responsive.component';
+import {PipeComponent} from './pipe/pipe.component';
+import {MultiplePipe} from './pipe/multiple.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindComponent,
     TwobindComponent,
-    ResponsiveComponent
+    ResponsiveComponent,
+    PipeComponent,
+    MultiplePipe
   ],
   imports: [
     BrowserModule,

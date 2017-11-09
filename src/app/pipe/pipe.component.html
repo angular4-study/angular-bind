@@ -1,0 +1,10 @@
+<hr>
+<h3>管道</h3>
+<p>原始日期：{{birthday}}</p>
+<!-- birthday值通过管道操作符，流通到date管道函数中，多个管道可以连接在一起
+ 在angular中，内置了十几个管道 -->
+<p>日期1：{{birthday | date | uppercase}}</p>
+<p>日期2：{{birthday | date: "yyyy-MM-dd HH:mm:ss"}}</p>
+<!-- 2.3-4 : 2代表正数位，，3代表最少小数位，4代表最多小数位；不足补0，会四舍五入 -->
+<p>数字：{{pi | number: "2.3-4"}}</p>
+<p>自定义乘法管道：{{num | multiple: 4}}</p>

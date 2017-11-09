@@ -21,8 +21,6 @@ export class BindComponent implements OnInit {
 
   divStyleObj = {color: 'red', background: 'yellow'};
 
-  name: string;
-
   constructor() {
     setTimeout(() => { // 一次性定时器
       this.divClass = 'a b c';
@@ -30,10 +28,6 @@ export class BindComponent implements OnInit {
       this.divClassObj = {a: true, b: true, c: true};
       this.isDev = false;
       this.divStyleObj = {color: 'yellow', background: 'red'};
-    }, 3000);
-
-    setInterval( () => { // 周期性定时器
-      this.name = 'Tom';
     }, 3000);
 
   }
@@ -48,10 +42,6 @@ export class BindComponent implements OnInit {
   doOnInput(event: any) {
     console.log(event.target.value); // 这个value是dom属性
     console.log(event.target.getAttribute('value')); // 这个value是html属性
-  }
-
-  twoBind(event: any) {
-    this.name = event.target.value;
   }
 
 }

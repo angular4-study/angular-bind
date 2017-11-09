@@ -1,4 +1,8 @@
-<p>双向绑定2</p>
+<p>-------------------------------双向绑定---------------------------</p>
+<div>
+  <input [value]="name" (input)="twoBind($event)">
+  <b>双向绑定1:{{name}}</b>
+</div>
 <div>
   <!-- 这个例子中，ngModel指令用在input标签上，这时，使用的是input的事件，此时input事件
    是驱动input标签和底层DOM对象同步的一个默认事件，当ngModel指令用在不同的其它的HTML标签

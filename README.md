@@ -70,6 +70,16 @@
   - 在传统的javaScript里面，事件被作为一次性的处理来对待。在angular中，引入了一种新的事件处理的思路：
   将事件作为一个永不结束的流来处理。
 
+# 管道：
+  - 创建管道：```ng g pipe pipe/multiple```, pipe/multiple 为自定义名
+  - 管道和模块一样，都是要声明在app.module.ts的declarations里
+  - 负责处理原始值到显示值的转换
+  - 把数据作为输入，然后转换，给出期望的输出
+  - 管道操作符“ |  ”，一个竖线
+  - 多个管道可以通过管道操作符连接在一起；在angular中，内置了十几个管道
+  
+  
+
 # AngularBind
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.

@@ -1,8 +1,9 @@
-
-<!-- 模板本地变量语法：方便地获得一个HTML元素引用；myField即input标签 -->
-<input #myField (keyup)="onKey(myField.value)">
 <hr>
-<p>
-  响应式编程DEMO
-</p>
-<input [formControl]="searchInput">
+<div>
+  <!-- 模板本地变量语法：方便地获得一个HTML元素引用；myField即input标签 -->
+  模板本地变量语法:<input #myField (keyup)="onKey(myField.value)">
+  <p>
+    响应式编程DEMO
+  </p>
+  <input [formControl]="searchInput">
+</div>
