@@ -1,0 +1,70 @@
+<p>
+  <!-- 3.事件绑定 -->
+  <button (click) = "doOnclick($event)">点击事件</button>
+</p>
+<p>
+  <!-- 1.DOM属性绑定 -->
+  <img [src]="imgUrl">
+</p>
+<p>
+  <!-- 2.插值表达式绑定(更推荐) = DOM绑定 -->
+  <img src="{{imgUrl}}">
+</p>
+<p>
+  <!-- 3.事件绑定 -->
+  <input value="Tom" (input)="doOnInput($event)">
+</p>
+
+<p>
+  <!-- 4.特殊属性disabled，是一个html属性，对它来说，设置值无关紧要,
+  不能通过设置它的值来改变ui是否可以点击，但是我们可以通过设置dom属性的disabled来改变ui -->
+  <button disabled="true">disabled属性</button>
+</p>
+<hr>
+<table>
+  <tr>
+    <!-- 5.HTML属性绑定，就是在前面加上 ‘attr.’ -->
+    <td [attr.collspan] = "size">慕课HTML属性绑定</td>
+  </tr>
+</table>
+
+<div class="a b c">
+  慕课网（不使用任何绑定）
+</div>
+<hr>
+<div [class]="divClass">
+  慕课网（设置定时器，3s后<b>全替换</b>）
+</div>
+<hr>
+<div class="a b" [class.c]="isBig">
+  慕课网（设置定时器，3s后<b>增加一部分class</b>）
+</div>
+<hr>
+<div [ngClass]="divClassObj">
+  慕课网（设置定时器，3s后<b>ngClass指令操作所有类</b>）
+</div>
+<hr>
+<hr>
+<div [style.color]=" isDev ? 'red' : 'blue' ">
+  慕课网（设置定时器，3s后<b>操作color</b>）
+</div>
+<hr>
+<div [style.font-size.em]=" isDev ? 3 : 1 ">
+  慕课网（设置定时器，3s后<b>操作字体大小的单位</b>）
+</div>
+<hr>
+<div [ngStyle]="divStyleObj">
+  慕课网（设置定时器，3s后<b>ngClass指令操作字体大小的单位</b>）
+</div>
+
+
+
+
+
+
+
+
+
+<div style="height: 200px;">
+
+</div>
